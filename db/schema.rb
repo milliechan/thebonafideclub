@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20160911004031) do
   enable_extension "uuid-ossp"
 
   create_table "likes", force: :cascade do |t|
-    t.string   "liker_id"
+    t.integer  "user_id"
     t.boolean  "liked"
-    t.string   "likee_id"
+    t.integer  "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "matches", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
-    t.string   "matcher_id"
-    t.string   "matchee_id"
+    t.integer  "user_id"
+    t.integer  "match_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["id"], name: "index_matches_on_id", using: :btree
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20160911004031) do
 
   create_table "users", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
     t.string   "email"
-    t.string   "password_digest"
+    t.string   "encrypted_password"
     t.string   "name"
     t.integer  "age"
     t.string   "picture"
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20160911004031) do
     t.string   "latitude"
     t.string   "longitude"
     t.integer  "score"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
