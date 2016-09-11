@@ -12,6 +12,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :bio
       t.string :latitude
       t.string :longitude
+      t.integer :score
 
       t.timestamps
     end
