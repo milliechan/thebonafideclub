@@ -1,5 +1,5 @@
 class Like < ApplicationRecord
-	validates :user_id, :liked, :match_id, presence: true
-  has_one :liker, class: :user, foreign_key: liker_id
-  has_one :likee, class: :user, foreign_key: likee_id
+	# validates :user_id, :liked, :match_id, presence: true
+  belongs_to :liker, :class_name => "User", :foreign_key => :liker_id
+  belongs_to :likee, :class_name => "User", :foreign_key => :likee_id
 end

@@ -10,8 +10,22 @@ class User < ApplicationRecord
 
   # Returns the hash digest of the given string.
 
-  has_many :likes
-  has_many :matches
+  has_many :likes, :foreign_key => "liker_id"
+  has_many :likees, :through => :likes
+  # has_many :inverse_likes, :class_name => "Like", :foreign_key => "likee_id"
+  # has_many :inverse_likees, :through => :inverse_likes, :source => :user
+  has_many :matches, :foreign_key => "matcher_id"
+  has_many :matchees, :through => :matches
+
+  # has_and_belongs_to_many :likes,
+  #   class_name: "User",
+  #   foreign_key: "liker_id",
+  #   association_foreign_key: "likee_id"
+
+  # has_and_belongs_to_many :matchs,
+  #   class_name: "User",
+  #   foreign_key: "matcher_id",
+  #   association_foreign_key: "matchee_id"
 
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :

@@ -1,4 +1,4 @@
 class Match < ApplicationRecord
-	has_one :matcher, class: :user, foreign_key: :matcher_id
-  has_one :matchee, class: :user, foreign_key: :matchee_id
+	belongs_to :matcher, :class_name => "User", foreign_key: :matcher_id
+  belongs_to :matchee, :class_name => "User", foreign_key: :matchee_id
 end

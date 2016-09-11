@@ -17,16 +17,16 @@ ActiveRecord::Schema.define(version: 20160911004031) do
   enable_extension "uuid-ossp"
 
   create_table "likes", force: :cascade do |t|
-    t.integer  "user_id"
+    t.string   "liker_id"
     t.boolean  "liked"
-    t.integer  "match_id"
+    t.string   "likee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "matches", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "match_id"
+    t.string   "matcher_id"
+    t.string   "matchee_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["id"], name: "index_matches_on_id", using: :btree
