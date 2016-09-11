@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+body{
+	background-color: snow;
+}
+
+
+.box{
+	background-color: lightgrey;
+	padding: 5%;
+	border-radius: 25px;
+}
+.roundbrd{
+	border-radius: 50%;
+	width: 50%;
+	height: auto;
+}
+
+
+.red{
+	color: red;
+}
+
+
+.green{
+	color: green;
+}
+
+
+.navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
+    color: black;
+}
+
+.navbar-default .navbar-header .navbar-brand {
+    color: black;
+}
