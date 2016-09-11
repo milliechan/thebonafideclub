@@ -23,13 +23,25 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                
-                    <li>
-                        <a class="page-scroll" href="/sessions/new">Log In</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="/users/new">Sign Up</a>
-                    </li>
+                    <% if !@_current_user %>
+                        <li>
+                            <a class="page-scroll" href="/sessions/new">Log In</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/users/new">Sign Up</a>
+                        </li>
+                    <% else %>
+                        <li>
+                            <a class="page-scroll" href="/messages/new"> Messages</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/sessions/new">Profile</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="/users/new">Sign Up</a>
+                        </li>
+
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
