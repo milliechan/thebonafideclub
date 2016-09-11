@@ -1,3 +1,4 @@
 class Match < ApplicationRecord
-	validates :user_id, :match_id, presence: true
+	has_one :matcher, class: :user, foreign_key: :matcher_id
+  has_one :matchee, class: :user, foreign_key: :matchee_id
 end
