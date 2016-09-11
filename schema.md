@@ -2,11 +2,13 @@
 
 ## Users
 - id
+- email
+- password_digest
 - name (string)
 - age (int)
+- picture (url hosted in s3)
 - location (string)
 - bio (text)
-- pictures (urls hosted in s3)
 - Stretch goals:
     - latitude
     - longitude
@@ -23,7 +25,7 @@
 ## Messages
 - from_user_id
 - to_user_id
-- channel 
+- channel
 
 - Stretch goals:
   - read_datetime
