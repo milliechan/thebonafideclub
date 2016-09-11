@@ -22,8 +22,8 @@
 
 ## Messages
 - from_user_id
-- sent_datetime
 - to_user_id
-- text
+- channel 
+
 - Stretch goals:
   - read_datetime
