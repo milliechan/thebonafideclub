@@ -1,59 +1,23 @@
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-
-        
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   
-                    <li>
-                        <a class="page-scroll" href="#features">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Log In</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+<% if !@_current_user %>
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-sm-7">
+                <div class="col-sm-12">
                     <div class="header-content">
                         <div class="header-content-inner">
                             <h1>The Bonafide Club is a dating app that cuts out the bullsh*t in your life </h1>
+                            <center>
+                            <div class="row">
+                            <p><a href="/sessions/new" class="btn btn-info" role="button">Sign In</a> 
+                                   &nbsp;or&nbsp;   
+                                   <a href="/users/new" class="btn btn-info" role="button">Sign Up</a></p>
+                                   </div>
+                                </center>
   
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                    <div class="device-container">
-                        <div class="device-mockup iphone6_plus portrait white">
-                            <div class="device">
-                                <div class="screen">
-                                	<br><br><br><br><br><br><br>
-                                   <a href="#" class="btn btn-info" role="button">Sign In</a> 
-                                   <p>or</p>
-                                   <a href="#" class="btn btn-info" role="button">Sign Up</a>
-                                </div>
-                                <div class="button">
-                                
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
             </div>
         </div>
     </header>
@@ -72,13 +36,15 @@
 
 
     <section class="cta">
+        <center>
         <div class="cta-content">
             <div class="container">
-                <h2>Stop waiting.<br>Find your special person today.</h2>
+                <h2>Stop waiting. Find your special person today.</h2>
                 <a href="#contact" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
             </div>
         </div>
         <div class="overlay"></div>
+        </center>
     </section>
 
     <section id="contact" class="contact bg-primary">
@@ -114,3 +80,44 @@
             </ul>
         </div>
     </footer>
+<% else %>
+<br>
+<br>
+
+
+<div style="background-color: snow;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="header-content">
+                        <div class="">
+            
+                            <center>
+                                <h1>Swipe your heart out</h1>
+                           
+                            <img src="http://themepack.me/i/c/749x468/media/g/670/hot-girl-theme-bq17.jpg">
+                            <br>
+                            <div>
+                                <a href="/users/new" role="button"><span class="red fa fa-times-circle fa-5x"></span></a>
+
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="/users/new" role="button"><span class="green fa fa-gratipay fa-5x"></span></a>
+                            </div>
+                        </center>
+
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div><br>
+<br>
+<br>
+<br><br>
+<br>
+
+
+    </div>
+
+
+<% end %>

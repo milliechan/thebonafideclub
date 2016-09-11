@@ -330,13 +330,13 @@ section.cta .cta-content {
   position: relative;
   z-index: 1;
 }
-section.cta .cta-content h2 {
+/*section.cta .cta-content h2 {
   margin-top: 0;
   margin-bottom: 25px;
   color: white;
   max-width: 450px;
   font-size: 50px;
-}
+}*/
 @media (min-width: 768px) {
   section.cta .cta-content h2 {
     font-size: 80px;
