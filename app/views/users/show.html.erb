@@ -13,10 +13,15 @@
 	</div>
 
 	<div class="container">
-		<h1><%= @user.name %></h1>
+		<h1><%= @user.name %><span><h5>Score: <% if  !@user.score.nil? %>
+				<%= @user.score %>
+			<% else %>
+				0
+			<% end %>
+		</h5></span></h1>
 		<h4>Currently at <%= @user.location %></h4>
 		<h4>Bio: <%= @user.bio %></h4>
-		
+
 		<center>
 			<a href="#" class="btn btn-info" role="button">Messege them!</a>
 		</center>
