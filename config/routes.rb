@@ -3,4 +3,5 @@ Rails.application.routes.draw do
    get '/' => 'sessions#index'
    get '/sessions/new' => 'sessions#new'
    get '/users/new' => 'users#new'
+   get '/users/:id' => 'users#show'
 end

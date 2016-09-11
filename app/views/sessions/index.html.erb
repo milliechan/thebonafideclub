@@ -1,31 +1,4 @@
-
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-          
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-
-        
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   
-                    <li>
-                        <a class="page-scroll" href="#features">Sign Up</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Log In</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+<% if !@_current_user %>
     <header>
         <div class="container">
             <div class="row">
@@ -107,3 +80,44 @@
             </ul>
         </div>
     </footer>
+<% else %>
+<br>
+<br>
+
+
+<div style="background-color: snow;">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="header-content">
+                        <div class="">
+            
+                            <center>
+                                <h1>Swipe your heart out</h1>
+                           
+                            <img src="http://themepack.me/i/c/749x468/media/g/670/hot-girl-theme-bq17.jpg">
+                            <br>
+                            <div>
+                                <a href="/users/new" role="button"><span class="red fa fa-times-circle fa-5x"></span></a>
+
+                                &nbsp;&nbsp;&nbsp;
+                                <a href="/users/new" role="button"><span class="green fa fa-gratipay fa-5x"></span></a>
+                            </div>
+                        </center>
+
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div><br>
+<br>
+<br>
+<br><br>
+<br>
+
+
+    </div>
+
+
+<% end %>
