@@ -1,1 +1,24 @@
-<h1>Show User</h1>
+<br>
+<br>
+<br><br>
+<div class="box container">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12 col-lg-12">
+				<center>
+					<img class="roundbrd" src="http://www.telegraph.co.uk/content/dam/news/2016/05/18/98358303_dagmara-large_trans++qVzuuqpFlyLIwiB6NTmJwfSVWeZ_vEN7c6bHu2jJnT8.jpg">
+				</center>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<h1><%= @user.name %></h1>
+		<h4>Currently at <%= @user.location %></h4>
+		<h4>Bio: <%= @user.bio %></h4>
+		
+		<center>
+			<a href="#" class="btn btn-info" role="button">Messege them!</a>
+		</center>
+	</div>
+</div>
