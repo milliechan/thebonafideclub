@@ -5,7 +5,9 @@ require 'faker'
 	  			age: rand(18..65),
 	   			password_digest: "123",
 	   			location: Faker::Address.city,
-	   			bio: Faker::Hipster.paragraph(2))
+	   			bio: Faker::Hipster.paragraph(2),
+				picture: "https://s3-us-west-2.amazonaws.com/thebonafideclub/" + ["1", "2", "3", "4", "5", "6", "7"].sample
+				)
 end
 
 50.times do
