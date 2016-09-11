@@ -47,3 +47,7 @@ body{
 .navbar-default .navbar-header .navbar-brand {
     color: black;
 }
+
+.white {
+	color: white;
+}
