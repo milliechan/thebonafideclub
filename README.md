@@ -1,6 +1,9 @@
 # thebonafide.club
 Submission to Tech Crunch SF Disrupt 2016 
 
+## Screenshots 
+![screenshots](/homepage.gif "TheBonaFideClub Demo")
+
 ## Inspiration 
 The Bonafide Club is the dating site for genuine people. We believe that past experience is incredibly powerful when harnessed to inform your future. 
 
