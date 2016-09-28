@@ -29,10 +29,15 @@ Ruby on Rails, PostgreSQL, IBM-Watson, Heroku, Python, Twilio, Bash, Google-Comp
 
 ## Team
 [Andy Robb](https://github.com/arobb)
+
 [Jason Sutter](https://github.com/jasonsutter87)
+
 [Millie Chan](https://github.com/milliechan)
+
 [Nick Davidson](https://github.com/ndavidsonsf)
+
 [Nick Russo](https://github.com/sinwav)
+
 
 
 
